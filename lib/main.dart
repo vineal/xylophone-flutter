@@ -5,17 +5,16 @@ void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   static AudioCache player = AudioCache();
-  Expanded buildKey(Color tileColor, int soundNum) {
-    return Expanded(
-      child: FlatButton(
-        onPressed: () {
-          player.play('note$soundNum.wav');
-        },
-        color: tileColor,
-        child: Container(),
-      ),
-    );
-  }
+
+  Expanded buildKey(Color tileColor, int soundNum) => Expanded(
+        child: FlatButton(
+          onPressed: () {
+            player.play('note$soundNum.wav');
+          },
+          color: tileColor,
+          child: Container(),
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
