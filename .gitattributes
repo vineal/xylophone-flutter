@@ -1,0 +1,2 @@
+*.podspec linguist-detectable=false
+*Podfile linguist-detectable=false
